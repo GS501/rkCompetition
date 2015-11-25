@@ -1,9 +1,10 @@
 #pragma platform(VEX)
+#pragma competitionControl(Competition)
 
 #ifdef RKCOMP_DEBUG
-#include "rkUtil003.h"
+#include "rkUtil/lib.h"
 
-#include "rkLogic/dlatch001.h"
+#include "rkLogic/dlatch.h"
 
 bool _rkBotDisabled = bIfiRobotDisabled,
 	_rkAutonMode = bIfiAutonomousMode,
@@ -72,7 +73,6 @@ void rkCompDebugMenu(
 }
 
 #else
-#pragma competitionControl(Competition);
 
 #define rkBotDisabled bIfiRobotDisabled
 #define rkAutonMode bIfiAutonomousMode
